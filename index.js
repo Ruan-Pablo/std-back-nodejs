@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
 const morgan = require('morgan')
+const bodyParse = require('body-parser')
 
 // dev - ambiente de desenvolvimento: tem a ver com variavel de ambiente do node
 app.use(morgan('dev'));
-
+app.use(bodyParse.json()) // assim eu consigo recuperar o conteúdo da req
 
 
 app.get('/', (req, res) => {
@@ -21,8 +22,7 @@ app.get('/:id', (req, res) => {
 // CRIAR UM REGISTRO
 app.post('/', (req, res) => {
     const body = req.body;
-    // na proxima vai ter esse body tratado
-    res.json({mensagem: 'CRIAR REGISTRO'});
+    res.json(body);
 })
 // ATUALIZAR
 app.put('/:id', (req,res) => {

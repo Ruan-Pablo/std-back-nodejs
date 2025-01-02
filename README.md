@@ -1,5 +1,7 @@
 # Estudo de back-end com NodeJS
 
+Baseado nessa playlist do Silvio Sampaio: [link](https://www.youtube.com/watch?v=1VpmPJ-dWsE&list=PL_Axpn7FrXHRxxq7fvNwW-Tjx_I8_7Omx&index=1)
+
 ## npm
 
 Gerenciador de pacotes: partes de codigo com funcionalidades que pessoas desenvolveram
@@ -52,3 +54,17 @@ tipo um retorno do status. (GET / 404)
 
 instalação no package.json:
 - yarn add morgan
+
+### body-parser
+Tratar o json do body
+- Parsear para json
+- parsear para urlencoder(outro tipo de envio de formulario)
+
+## mongoDB
+
+Banco de dados baseados em documentos. Basicamente ele guarda documentos *json*
+- rápido
+- chama de documento mongo
+- passível de utilizar js
+- possui em clound (pago)
+
