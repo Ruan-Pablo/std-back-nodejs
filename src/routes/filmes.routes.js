@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const Filme = require('../models/filme')
 // esse arquivo vai exportar todas as rotas
  
 router.get('/', (req, res) => {
@@ -14,9 +15,14 @@ router.get('/:id', (req, res) => {
 });
 
 // CRIAR UM REGISTRO
-router.post('/', (req, res) => {
-    const body = req.body;
-    res.json(body);
+router.post('/', async (req, res) => {
+    try{
+        const filme = req.body;
+        const response = await new Filme(filme).save() // enquanto isso nn executar nn paça pra linha abaixo
+        res.json({erro: false, filme: response});
+    } catch(err) {
+        res.json({erro: true, message: err.message});
+    }
 })
 // ATUALIZAR
 router.put('/:id', (req,res) => {

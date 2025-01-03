@@ -68,3 +68,13 @@ Banco de dados baseados em documentos. Basicamente ele guarda documentos *json*
 - passível de utilizar js
 - possui em clound (pago)
 
+## mongoose
+
+Framework js para trabalhar com mongo DB
+
+para instalar:
+- yarn add mongoose
+
+Para armazenar é necessário os modelos que são um **mapeamento da estutura do obj que vai ser guardado**
+
+o mongoose permite criar esses models
