@@ -2,10 +2,9 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan')
 const bodyParse = require('body-parser')
-const mongoose = require('mongoose')
+const database = require('./src/services/database') // faz conexão com o banco
 
 const routes = require("./src/routes/filmes.routes")
-mongoose.connect('mongodb://localhost:27017/std-back-nodejs-netflix')
 
 // dev - ambiente de desenvolvimento: tem a ver com variavel de ambiente do node
 app.use(morgan('dev'));
