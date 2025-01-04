@@ -3,15 +3,26 @@ const router = express.Router();
 const Filme = require('../models/filme')
 // esse arquivo vai exportar todas as rotas
  
-router.get('/', (req, res) => {
-    // recuperar todos os registros
-    res.json({mensagem: 'PEGAR TODOS OS REGISTROS'});
+// recuperar TODOS os registros
+router.get('/', async (req, res) => {
+    try {
+        const filmes = await Filme.find({}) // possivel de passar filtros nas {}
+        res.json({error: false, filmes});
+    } catch (err){
+        res.json({error: true, message: err.message});
+    }
 });
 
-router.get('/:id', (req, res) => {
-    // recuperar um registro
-    const id = req.params.id;
-    res.json({mensagem: `PEGAR REGISTRO COM ID: ${id}`});
+// recuperar UM registro
+router.get('/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        const filme = await Filme.findById(id)
+        res.json({error: false, filme});
+    } catch (err) {
+        res.json({error: true, message: err.message});
+    }
+
 });
 
 // CRIAR UM REGISTRO
@@ -24,15 +35,27 @@ router.post('/', async (req, res) => {
         res.json({erro: true, message: err.message});
     }
 })
+
 // ATUALIZAR
-router.put('/:id', (req,res) => {
-    const id = req.params.id;
-    res.json({mensagem: `ATUALIZAR O REGISTRO COM ID: ${id}`})
+router.put('/:id', async (req,res) => {
+    try {
+        const new_filme = req.body;
+        const id = req.params.id;
+        const filme_atualizado = await Filme.findByIdAndUpdate(id, new_filme) 
+        res.json({error: false, filme: filme_atualizado})
+    } catch (error) {
+        res.json({erro: true, message: err.message});
+    }
 })
 // APAGAR
-router.delete('/:id', (req, res)=>{
-    const id = req.params.id;
-    res.json({mensagem: `DELETAR O REGISTRO COM ID: ${id}`})
+router.delete('/:id', async (req, res)=>{
+    try {
+        const id = req.params.id;
+        const filme_deletado = await Filme.findByIdAndDelete(id)  
+        res.json({error: false, filme_deletado})
+    } catch (error) {
+        res.json({erro: true, message: err.message});
+    }
 })
 
 // com isso ele exporta
