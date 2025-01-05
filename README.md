@@ -82,3 +82,13 @@ o mongoose permite criar esses models
 ## seed (tecnica)
 
 Consiste em criar um alimentador do banco a partir de arquivos Json. No projeto foi criado a pasta scripts com os arquivos que alimentam o banco
+
+## CORS
+
+- yarn add cors
+
+> no meu nn estava instalado por padrão
+
+serve como **controle de acesso**. Via insominia é tranquilo fazer requisições, no entanto, quando for feito com react se nn tiver o CORS configurado o back-end bloqueia requisições do localhost. 
+
+Com o que foi feito ele ja aceita requisições de outros domínios
