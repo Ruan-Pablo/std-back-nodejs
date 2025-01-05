@@ -1,0 +1,22 @@
+[
+    {
+        "nome": "Silvio Luis",
+        "senha": "123",
+        "email": "silvioûteste.com"
+    },
+    {
+        "nome": "Juliana Righi",
+        "email": "julianaateste.com",
+        "senha": "123"
+    },
+    {
+        "nome": "Omar Lopes",
+        "senha": "123",
+        "email": "Promarateste.com"
+    },
+    {
+        "nome": "Mikael Lopes",
+        "senha": "123",
+        "email": "mikael@teste.com"
+    }
+]
