@@ -92,3 +92,16 @@ Consiste em criar um alimentador do banco a partir de arquivos Json. No projeto 
 serve como **controle de acesso**. Via insominia é tranquilo fazer requisições, no entanto, quando for feito com react se nn tiver o CORS configurado o back-end bloqueia requisições do localhost. 
 
 Com o que foi feito ele ja aceita requisições de outros domínios
+
+## underscore
+
+Para fazer operações matematicas e trabalhar com objetos e array
+
+Será usado para misturar os filmes e tornar a apresentação do home mais dinamica
+
+Aqui foram usados os metodos:
+- shurfle: para misturar o array
+- chunk: para fazer fatias, um slice(picotar), um array
+
+para instalar:
+- yarn add underscore

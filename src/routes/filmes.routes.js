@@ -1,8 +1,45 @@
 const express = require("express");
 const router = express.Router();
 const Filme = require('../models/filme')
+const Temporada = require('../models/temporada')
+const _ = require('underscore')
 // esse arquivo vai exportar todas as rotas
  
+router.get('/home', async (req, res) => {
+    try {
+        let filmes = await Filme.find({}) // pegar todos os filmes
+        let finalFilmes = []
+
+        // recuperando e relacionando as temporadas
+        for (let filme of filmes){
+            const temporadas = await Temporada.find({
+                filme_id: filme._id
+            }) // pegar todas as temporadas do filme em questão
+            //_doc (problema com o mongoose) trazer o so o documento ao inves do obj inteiro
+            const newFilme = {... filme._doc, temporadas} // cria outro obj com os filmes e as temporadas juntos 
+            finalFilmes.push(newFilme)
+        }
+
+        // misturar os resultados (random) para deixar *dinamico*
+        // para quando for carregar a capa ser sempre diferente
+        finalFilmes = _.shuffle(finalFilmes) // mistura aleatoriamente
+
+        // filme principal - capa do home
+        const principal = finalFilmes[0]
+
+        // separar em seções
+        const secoes = _.chunk(finalFilmes, 5) // quebra em varios arrays
+        // antes [1,2,3,4,5,6,7,8,9] - aplicando um chunk([],3)
+        // dps [[1,2,3],[4,5,6],[7,8,9]]
+
+        res.json({error:false, principal, secoes})
+
+    } catch (err) {
+        res.json({error:true, message: err.message})
+        
+    }
+})
+
 // recuperar TODOS os registros
 router.get('/', async (req, res) => {
     try {
