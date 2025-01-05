@@ -7,6 +7,7 @@ const database = require('./src/services/database') // faz conexão com o banco
 
 const filmeRoutes = require("./src/routes/filmes.routes")
 const usuarioRoutes = require("./src/routes/usuarios.routes")
+const episodioRoutes = require("./src/routes/episodios.routes")
 
 // MIDDLE
 app.use(morgan('dev'));
@@ -16,6 +17,7 @@ app.use(bodyParse.json())
 // ROUTES
 app.use('/', filmeRoutes)
 app.use('/usuario', usuarioRoutes)
+app.use('/episodio', episodioRoutes)
 
 app.listen(3000, () => {
     console.log('Meu servidor esta funfando')
