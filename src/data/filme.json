@@ -1,0 +1,107 @@
+[
+    {
+        "titulo": "Breaking Bad",
+        "tipo": "serie",
+        "capa": "https://i.imgur.com/EJyDfey.jpg",
+        "logo": "https://i.imgur.com/4xN7wB8.png",
+        "thumb": "https://i.imgur.com/smFnAR5.png",
+        "descricao": "O professor de quimica Walter White não acredita que sua vida",
+        "generos": [
+            "Séries dramáticas sobre crimes",
+            "Suspense para TV",
+            "Séries dramáticas"
+        ],
+        "elenco": ["Brayan Cranston", "Aaron Paul", "Anna Gunn"],
+        "cenas_momentos": ["Violentos", "Realistas", "Sombrios"]
+    },
+    {
+        "titulo": "Stranger Things",
+        "tipo": "serie",
+        "capa": "https://i.imgur.com/hZtVxLp.jpg",
+        "logo": "https://i.imgur.com/uBYChvE.png",
+        "thumb": "https://i.imgur.com/LX5VeEz.png",
+        "descricao": "Um grupo de amigos em uma pequena cidade descobre segredos sobrenaturais.",
+        "generos": [
+            "Ficção científica para TV",
+            "Séries de mistério",
+            "Séries de aventura"
+        ],
+        "elenco": ["Millie Bobby Brown", "Finn Wolfhard", "Winona Ryder"],
+        "cenas_momentos": ["Assustadores", "Emocionantes", "Enigmáticos"]
+    },
+    {
+        "titulo": "The Witcher",
+        "tipo": "serie",
+        "capa": "https://i.imgur.com/PJbXvGj.jpg",
+        "logo": "https://i.imgur.com/bN1AbPi.png",
+        "thumb": "https://i.imgur.com/2dyOhNy.png",
+        "descricao": "Um caçador de monstros luta para encontrar seu lugar em um mundo cheio de seres mágicos.",
+        "generos": [
+            "Séries de fantasia",
+            "Ação e aventura",
+            "Drama"
+        ],
+        "elenco": ["Henry Cavill", "Anya Chalotra", "Freya Allan"],
+        "cenas_momentos": ["Intensas", "Sombrio", "Cheias de ação"]
+    },
+    {
+        "titulo": "Inception",
+        "tipo": "filme",
+        "capa": "https://i.imgur.com/ZQvYYXQ.jpg",
+        "logo": "https://i.imgur.com/Z1XzVXc.png",
+        "thumb": "https://i.imgur.com/3FbXZvJ.png",
+        "descricao": "Um ladrão que invade sonhos tenta realizar o roubo perfeito.",
+        "generos": [
+            "Ficção científica",
+            "Suspense psicológico",
+            "Ação"
+        ],
+        "elenco": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+        "cenas_momentos": ["Mente-expansivas", "Cheias de ação", "Intrigantes"]
+    },
+    {
+        "titulo": "The Crown",
+        "tipo": "serie",
+        "capa": "https://i.imgur.com/sZtPrcf.jpg",
+        "logo": "https://i.imgur.com/7EjNWyY.png",
+        "thumb": "https://i.imgur.com/NkYnGPf.png",
+        "descricao": "A história da rainha Elizabeth II e os desafios de sua monarquia.",
+        "generos": [
+            "Séries históricas",
+            "Drama político",
+            "Biografia"
+        ],
+        "elenco": ["Olivia Colman", "Claire Foy", "Tobias Menzies"],
+        "cenas_momentos": ["Históricas", "Dramáticas", "Reflexivas"]
+    },
+    {
+        "titulo": "The Dark Knight",
+        "tipo": "filme",
+        "capa": "https://i.imgur.com/v4uPL6N.jpg",
+        "logo": "https://i.imgur.com/9v6YGFx.png",
+        "thumb": "https://i.imgur.com/LrftEl5.png",
+        "descricao": "Batman enfrenta seu maior inimigo, o Coringa, em uma batalha épica.",
+        "generos": [
+            "Ação",
+            "Drama",
+            "Suspense"
+        ],
+        "elenco": ["Christian Bale", "Heath Ledger", "Michael Caine"],
+        "cenas_momentos": ["Sombrio", "Cheio de ação", "Marcantes"]
+    },
+    {
+        "titulo": "Friends",
+        "tipo": "serie",
+        "capa": "https://i.imgur.com/s3P9vdT.jpg",
+        "logo": "https://i.imgur.com/jZzWYp8.png",
+        "thumb": "https://i.imgur.com/RtxHTjW.png",
+        "descricao": "Acompanhe a vida de seis amigos enquanto navegam pelo amor e pela carreira em Nova York.",
+        "generos": [
+            "Comédia",
+            "Romance para TV",
+            "Sitcom"
+        ],
+        "elenco": ["Jennifer Aniston", "Courteney Cox", "Matthew Perry"],
+        "cenas_momentos": ["Engraçadas", "Emocionantes", "Icônicas"]
+    }
+]

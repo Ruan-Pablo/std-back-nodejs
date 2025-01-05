@@ -78,3 +78,7 @@ para instalar:
 Para armazenar é necessário os modelos que são um **mapeamento da estutura do obj que vai ser guardado**
 
 o mongoose permite criar esses models
+
+## seed (tecnica)
+
+Consiste em criar um alimentador do banco a partir de arquivos Json. No projeto foi criado a pasta scripts com os arquivos que alimentam o banco
