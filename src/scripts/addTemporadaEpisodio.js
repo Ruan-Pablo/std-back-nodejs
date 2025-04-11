@@ -5,14 +5,14 @@ const Episodio = require('../models/episodio') // permite fazer operações de C
 
 const addTemporadaEpisodio = async () => {
     try {
-        const series = await Filme.find({tipo: "serie"}).select('_id') // procura serie no campo tipo e seleciona o id
+        const series = await Filme.find({ tipo: "serie" }) // procura serie no campo tipo e seleciona o id
         for (let serie of series){
-            console.log(`FILME ${serie}----`)
+            console.log(`FILME ${serie.titulo}----`)
             const numTemporadas = Math.floor(Math.random() * 5) + 1 // apenas para ilustrar e preencher com um numero aleatório
             for(let i = 1; i <= numTemporadas; i++){
                 console.log(`inserido temporada ${i} de ${numTemporadas}`)
                 const temporada = await new Temporada({
-                    filme_id:serie, 
+                    filme_id: serie._id, 
                     titulo: `Temporada ${i}`
                 }).save()
                 
